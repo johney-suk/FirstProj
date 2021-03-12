@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<title>Insert title here</title>
+<style>
+label {
+	display: inline-block;
+	width: 60px;
+}
+
+p {
+	margin: 5px 0;
+}
+
+fieldset {
+	width: 300px;
+}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(function() {
+		$('form').submit(function() {
+			alert("예약 완료");
+			this.action = "join_ok.jsp";
+			this.method ="POST";
+			this.submit();
+		});
+	});
+</script>
+</head>
+<body>
+
+	<h1>::: 고객정보입력 :::</h1>
+	<form>
+		<fieldset>
+			<legend>기본정보</legend>
+			<p>
+				<label for="name">이름</label><input type="text" id="name" name="name"
+					 />
+			</p>
+			<p>
+				<label for="email">email</label><input type="text" id="email"
+					name="email" />
+			</p>
+			<p>
+				<label for="tel">전화번호</label><input type="text" id="tel"
+					name="tel" />
+			</p>
+			<p>
+				<label for="gender">성별</label><input type="text" id="gender"
+					name="gender" />
+			</p>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div>
+				<p>		
+				<label for="lecture">수강클래스</label><input type="text" id="lecture"
+					name="lecture" />
+    <label for="reservation" class="form-label">예약 날짜</label>
+   <input type='date' name="date"/><br>
+			<p>
+				<input type="submit" value="저장하기" />
+			</p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
